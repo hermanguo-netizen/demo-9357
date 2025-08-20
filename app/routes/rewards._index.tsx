@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useNavigate, useSearchParams } from "@remix-run/react";
 import { generatePageTitle } from "@/utils/utils";
 import { Dashboard, ReferralProvider } from "@orderly.network/affiliate";
+import "../styles/rewards.css";
 
 export const meta: MetaFunction = () => {
   return [{ title: generatePageTitle("Rewards") }];
