@@ -54,7 +54,7 @@ export default function RewardsPage() {
         ...config.scaffold.mainNavProps,
         initialMenu: "/rewards",
       }}
-      leftSidebar={<LeftSidebar />}
+      // leftSidebar={<LeftSidebar />}
       footerProps={config.scaffold.footerProps}
       routerAdapter={{
         onRouteChange,
