@@ -5,3 +5,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 隐藏 powered by 元素 */
+.oui-scaffold-footer-powered-by {
+  display: none !important;
+}
