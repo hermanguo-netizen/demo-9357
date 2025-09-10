@@ -10,3 +10,13 @@
 .oui-scaffold-footer-powered-by {
   display: none !important;
 }
+
+/* Hide Radix trigger with dynamic id (escape colons in CSS id selector) */
+#radix-\:r9n\:-trigger-convertHistory {
+  display: none !important;
+}
+
+/* Fallback if the middle token changes across renders */
+[id^="radix-"][id$="-trigger-convertHistory"] {
+  display: none !important;
+}
