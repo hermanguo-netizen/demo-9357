@@ -14,7 +14,7 @@ export const leaderboardCampaigns: any[] = [
     description: 'Volume trading competition. Be the champion and win $1,000,000 in prizes!',
     image: './back.webp',
     start_time: new Date('2025-08-01T00:00:00Z').toISOString(),
-    end_time: new Date('2025-08-31T23:59:59Z').toISOString(),
+    end_time: new Date('2025-09-10T23:59:59Z').toISOString(),
     reward_distribution_time: undefined,
     volume_scope: undefined,
     prize_pools: [
@@ -249,9 +249,11 @@ export default function leaderboardPage() {
 
   const { dataAdapter } = useCustomRanking(campaignId);
 
+  console.log("campaignId", campaignId);
+
   return (
     <LeaderboardPage
-      campaignId={campaignId}
+      campaignId={124}
       onCampaignChange={setCampaignId as any}
       campaigns={leaderboardCampaigns}
       href={{

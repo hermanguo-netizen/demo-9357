@@ -94,7 +94,7 @@ export function useCustomRanking(campaignId?: string) {
                     current_page: page,
                     records_per_page: pageSize,
                 },
-                updatedTime: new Date('2025-07-04T23:59:59Z').getTime(),
+                updatedTime: new Date().getTime(),
             };
         },
         [rankingDataRes, userData, isLoading, userLoading, isMobile],
@@ -123,8 +123,10 @@ const getUrl = (args: { page: number; pageSize: number; address?: string; sort?:
     searchParams.set('aggregateBy', 'address_per_builder');
     searchParams.set('broker_id', args.brokerId);
     searchParams.set('sort', 'descending_perp_volume');
-    searchParams.set('start_date', '2025-06-18');
-    searchParams.set('end_date', '2025-07-05');
+    searchParams.set('start_date', '2025-08-20');
+    searchParams.set('end_date', '2025-09-10');
+
+    console.log("searchParams", searchParams.toString());
 
     if (args.address) {
         searchParams.set('address', args.address);
