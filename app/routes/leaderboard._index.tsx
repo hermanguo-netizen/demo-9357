@@ -253,7 +253,7 @@ export default function leaderboardPage() {
 
   return (
     <LeaderboardPage
-      campaignId={124}
+      campaignId={campaignId}
       onCampaignChange={setCampaignId as any}
       campaigns={leaderboardCampaigns}
       href={{
