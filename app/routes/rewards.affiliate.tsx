@@ -8,12 +8,12 @@ export const meta: MetaFunction = () => {
 
 export default function AffiliatePage() {
   return (
-      <ReferralProvider
-        becomeAnAffiliateUrl="https://orderly.network"
-        learnAffiliateUrl="https://orderly.network"
-        referralLinkUrl={typeof window !== 'undefined' ? window.location.origin : "https://orderly.network"}
-      >
-        <Dashboard.AffiliatePage />
-      </ReferralProvider>
+    <ReferralProvider
+      becomeAnAffiliateUrl="https://whalex.exchange"
+      learnAffiliateUrl="https://whalex.exchange"
+      referralLinkUrl={typeof window !== 'undefined' ? window.location.origin : "https://whalex.exchange"}
+    >
+      <Dashboard.AffiliatePage />
+    </ReferralProvider>
   );
 }
