@@ -11,7 +11,7 @@ import { getPageMeta } from "@/utils/seo";
 export const meta: MetaFunction = ({ params }) => {
   const rootSeoTags = getPageMeta();
   const pageSpecificTags = [{ title: generatePageTitle(formatSymbol(params.symbol!)) }];
-  return [...rootSeoTags, ...pageSpecificTags];
+  return [...pageSpecificTags, ...rootSeoTags];
 };
 
 export default function PerpPage() {
@@ -29,10 +29,10 @@ export default function PerpPage() {
     (data: API.Symbol) => {
       const symbol = data.symbol;
       setSymbol(symbol);
-      
+
       const searchParamsString = searchParams.toString();
       const queryString = searchParamsString ? `?${searchParamsString}` : '';
-      
+
       navigate(`/perp/${symbol}${queryString}`);
     },
     [navigate, searchParams]

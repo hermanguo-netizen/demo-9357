@@ -7,7 +7,7 @@ import { getPageMeta } from "@/utils/seo";
 export const meta: MetaFunction = () => {
   const rootSeoTags = getPageMeta();
   const pageSpecificTags = [{ title: generatePageTitle("Orders") }];
-  return [...rootSeoTags, ...pageSpecificTags];
+  return [...pageSpecificTags, ...rootSeoTags];
 };
 
 export default function OrdersPage() {

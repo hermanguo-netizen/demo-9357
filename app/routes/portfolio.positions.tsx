@@ -13,7 +13,7 @@ import { getPageMeta } from "@/utils/seo";
 export const meta: MetaFunction = () => {
   const rootSeoTags = getPageMeta();
   const pageSpecificTags = [{ title: generatePageTitle("Positions") }];
-  return [...rootSeoTags, ...pageSpecificTags];
+  return [...pageSpecificTags, ...rootSeoTags];
 };
 
 export default function PositionsPage() {
@@ -26,10 +26,10 @@ export default function PositionsPage() {
     (data: API.Symbol) => {
       const symbol = data.symbol;
       updateSymbol(symbol);
-      
+
       const searchParamsString = searchParams.toString();
       const queryString = searchParamsString ? `?${searchParamsString}` : '';
-      
+
       navigate(`/perp/${symbol}${queryString}`);
     },
     [navigate, searchParams]

@@ -6,18 +6,18 @@ import { getPageMeta } from "@/utils/seo";
 
 export const meta: MetaFunction = () => {
   const rootSeoTags = getPageMeta();
-  
+
   const pageSpecificTags = [];
-  
+
   if (import.meta.env.VITE_APP_NAME) {
     pageSpecificTags.push({ title: import.meta.env.VITE_APP_NAME });
   }
-  
+
   if (import.meta.env.VITE_APP_DESCRIPTION) {
     pageSpecificTags.push({ name: "description", content: import.meta.env.VITE_APP_DESCRIPTION });
   }
-  
-  return [...rootSeoTags, ...pageSpecificTags];
+
+  return [...pageSpecificTags, ...rootSeoTags];
 };
 
 export default function Index() {
